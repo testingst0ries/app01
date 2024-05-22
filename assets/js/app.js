@@ -1,4 +1,4 @@
-console.log('public_html/assets/js/app.js');
+console.log('assets/js/app.js');
 function throwNewError () {
     console.log("MSG: Test error gor executed..");
     throw new Error("Test error gor executed..");
