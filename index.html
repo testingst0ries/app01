@@ -13,10 +13,8 @@
 			const urlSearchParams = new URLSearchParams(window.location.search);
 			const params = Object.fromEntries(urlSearchParams.entries());
 			if (params.ac) { account_id = params.ac; }
-			console.log('account_id', account_id);
 			if (account_id) {
-				console.log('document.querySelector(".id_holder")', document.querySelector(".id_holder"));
-				document.querySelector(".id_holder").innerText = account_id;
+				document.querySelector(".id_holder")?.innerText = account_id;
 			}
 			return account_id;
 		}
@@ -98,7 +96,7 @@
 			</div>
 
 			<div class="container"><!-- Logo -->
-				<h1 id="logo"><a href="index.html">Testing stories.com</a></h1>
+				<h1 id="logo"><a href="index.html">Testingst0ries.github.io/app01/index.html</a></h1>
 
 				<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
 				<!-- Nav -->
