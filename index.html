@@ -13,6 +13,11 @@
 			const urlSearchParams = new URLSearchParams(window.location.search);
 			const params = Object.fromEntries(urlSearchParams.entries());
 			if (params.ac) { account_id = params.ac; }
+			console.log('account_id', account_id);
+			if (account_id) {
+				console.log('document.querySelector(".id_holder")', document.querySelector(".id_holder"));
+				document.querySelector(".id_holder").innerText = account_id;
+			}
 			return account_id;
 		}
 	</script>
@@ -47,6 +52,10 @@
 		s.src='https://storage.googleapis.com/troubleshooter/troubleshooter.js?r=' + Math.random() ;
 		document.getElementsByTagName('head')[0].appendChild(s);
 	</script> -->
+
+	<script defer>
+		setTimeout(getAcount, 1000);
+	</script>
 
 	<link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css" />
@@ -83,7 +92,7 @@
 	<div id="page-wrapper"><!-- Header -->
 		<section id="header">
 			<div><span>Account: </span><span class="id_holder">718915</span>
-				<a href="javascript:(function()%7Bvar%20accountId%20%3D%20prompt(%22Enter%20the%20accountId%22)%3B%0A%09if(accountId)%20%7B%0A%09%09const%20u%20%3D%20new%20URL(window.top.location.href)%0A%09%09u.searchParams.set('ac'%2C%20accountId)%3B%0A%09%09window.location.href%20%3D%20u.toString()%3B%0A%09%7D%7D)()%3B" class="ac_change_btn"> -->
+				<a href="javascript:(function()%7Bvar%20accountId%20%3D%20prompt(%22Enter%20the%20accountId%22)%3B%0A%09if(accountId)%20%7B%0A%09%09const%20u%20%3D%20new%20URL(window.top.location.href)%0A%09%09u.searchParams.set('ac'%2C%20accountId)%3B%0A%09%09window.location.href%20%3D%20u.toString()%3B%0A%09%7D%7D)()%3B" class="ac_change_btn">
 					<img src="assets/imgs/change-id.svg" />
 				</a>
 			</div>
